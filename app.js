@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+const PORT = 3000;
+const HOST = '0.0.0.0';
+
 app.use(cors());
 
 app.use(express.json());
@@ -15,12 +18,19 @@ conn();
 
 //routes
 
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
 
 const routes = require("./routes/router");
 app.use("/api", routes);
 
 
-app.listen(3000, function(){
+
+//app.listen(PORT, HOST);
+
+
+app.listen(PORT, HOST, function(){
     console.log("Servidor Online!");
 }); 
 

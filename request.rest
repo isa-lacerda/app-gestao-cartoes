@@ -3,15 +3,15 @@ Content-Type: application/json
 
 {
   "agencia": "Bradesco",
-  "conta": "123455466",
-  "cpf": "006.123.876-44",
-  "numCartao": "2222333344445555",
-  "dataNascimento": "2000-08-07",
-  "nomeCompleto": "Luciana Maria Souza",
-  "nomeCartao": "Luciana M Souza",
+  "conta": "4356",
+  "cpf": "123.123.876-44",
+  "numCartao": "1222333344445555",
+  "dataNascimento": "2003-08-07",
+  "nomeCompleto": "Gabriela Maria Souza",
+  "nomeCartao": "Gabriela M Souza",
   "bandeiraCartao": "Visa",
   "tipoCartao": "BLACK DIAMOND",
-  "dataVencimento": "5",
+  "dataVencimento": "10",
   "senha": "123456"
 }
 
@@ -43,21 +43,13 @@ PUT http://localhost:3000/api/services/2222333344445555/activate
 Content-Type: application/json
 
 {
-  "numCartao": "2222333344445555",
+    "numCartao": "2222333344445555",
     "agencia": "Bradesco",
     "conta": "123455466",
     "senha": "123456"
 }
 
-###
 
-// Bloquear um cartão
-PUT http://localhost:3000/api/services/2222333344445555/block
-
-{
-    "senha": "123456",
-    "motivo": "perda"
-}
 
 ###
 
